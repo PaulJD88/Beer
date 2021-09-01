@@ -10,6 +10,7 @@
 
 <style lang="scss">
 #app {
+  background-color: pink;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,5 +29,10 @@
       color: #42b983;
     }
   }
+}
+
+body {
+  background-color: grey;
+  margin: 0;
 }
 </style>
