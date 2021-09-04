@@ -7,9 +7,13 @@
       <option value="8">Eight</option>
     </select>
     <button @click="getBeers">Get Beers</button>
-        <div class="beers" v-for="beer in beers" :key="beer.id">
-          {{beer.image_url}}
-        </div>
+    <div class="beers" v-for="beer in beers" :key="beer.id">
+      <div class="tile">
+        <img :src="beer.image_url" />
+        <h2 class="title">{{ beer.name }}</h2>
+        <p class="info">{{ beer.description }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -47,15 +51,20 @@ h1 {
   background-color: purple;
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+img {
+  width: 80px;
+  height: auto;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.tile {
+  background-color: beige;
+  border: dashed purple;
+  width: 215px;
+  height: auto;
+  color: black;
+  text-align: center;
+  font-size: 10px;
+  float: left;
+  padding: 10px;
+  margin: 10px;
 }
 </style>
