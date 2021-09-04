@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>This is the home page</h1>
+    <button @click="randomBeer">Get Beer</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/FrontPage.vue';
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
+  methods: {
+    randomBeer() {
+      fetch('https://api.punkapi.com/v2/beers/random', {
+        method: 'GET',
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          this.random = json;
+        });
+    },
   },
 };
 </script>

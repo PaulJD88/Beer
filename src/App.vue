@@ -4,10 +4,7 @@
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/about">About</router-link></li>
-        <li class="dropdown">
-          <a class="dropbtn">Beer List</a>
-          <div class="dropdown-content"></div>
-        </li>
+        <li><router-link to="/beers">Beer List</router-link></li>
       </ul>
 
       <router-view />
@@ -17,6 +14,8 @@
 
 <style lang="scss">
 body {
+  height: 100%;
+  background-color: #59463f;
   margin: 0;
 }
 ul {
@@ -24,9 +23,9 @@ ul {
   align-content: space-between;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   overflow: hidden;
-  background-color: #8c8c8c;
+  background-color: beige;
 }
 
 li {
@@ -35,8 +34,10 @@ li {
 
 li a,
 .dropbtn {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  border-radius: 20px;
   display: inline-block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -44,6 +45,8 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: white;
   background-color: #a64f03;
 }
 
@@ -80,6 +83,6 @@ li.dropdown {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
 }
 </style>
