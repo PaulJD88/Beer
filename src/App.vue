@@ -6,7 +6,6 @@
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/beers">Beer List</router-link></li>
       </ul>
-
       <router-view />
     </div>
   </div>
