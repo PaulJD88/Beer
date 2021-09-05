@@ -1,18 +1,18 @@
 <template>
   <div class="hello">
     <div class="selector">
-    Beers ABV Above
-    <select v-model="abvAbove">
-      <option value="1">One</option>
-      <option value="8">Eight</option>
-    </select>
-    <button @click="getBeers">Get Beers</button>
+      Beers ABV Above
+      <select v-model="abvAbove">
+        <option value="1">One</option>
+        <option value="8">Eight</option>
+      </select>
+      <button @click="getBeers">Get Beers</button>
     </div>
     <div class="beers" v-for="beer in beers" :key="beer.id">
       <div class="tile">
         <img :src="beer.image_url" />
         <h2 class="title">{{ beer.name }}</h2>
-        <h2> {{ beer.abv }}% </h2>
+        <h2>{{ beer.abv }}%</h2>
         <p class="info">{{ beer.description }}</p>
       </div>
     </div>
@@ -59,7 +59,7 @@ p {
 .tile {
   border: solid black;
   border-radius: 25px;
-  background-color: #F2DE77;
+  background-color: #f2de77;
   width: 215px;
   height: auto;
   color: black;
