@@ -8,13 +8,15 @@
       </ul>
       <router-view />
     </div>
+    <div class="footer">
+      <h1>Copyright - T&P</h1>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
 body {
-  height: 100%;
-  background-color: #59463f;
+  background-color: white;
   margin: 0;
 }
 ul {
@@ -23,8 +25,9 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 5px;
+  height: 50px;
   overflow: hidden;
-  background-color: beige;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(0, 0, 0));
 }
 
 li {
@@ -37,8 +40,9 @@ li a,
   border-radius: 20px;
   display: inline-block;
   color: black;
+  font-size: 20px;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 18px;
   text-decoration: none;
 }
 
@@ -46,7 +50,7 @@ li a:hover,
 .dropdown:hover .dropbtn {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: white;
-  background-color: #a64f03;
+  background-color: black;
 }
 
 li.dropdown {
@@ -83,5 +87,9 @@ li.dropdown {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
+}
+.footer {
+  height: auto;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(0, 0, 0));
 }
 </style>

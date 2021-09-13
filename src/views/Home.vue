@@ -13,9 +13,11 @@
     <br />
     <div class="get beer">
       <button @click="randomBeer">Get Beers</button>
-      <div class="tile" v-for="beerbeer in beersR" :key="beerbeer.id">
-        <h1>{{ beerbeer.name }}</h1>
-        <img :src="beerbeer.image_url" />
+      <div class="flex-container">
+        <div class="tile" v-for="beerbeer in beersR" :key="beerbeer.id">
+          <h1>{{ beerbeer.name }}</h1>
+          <img :src="beerbeer.image_url" />
+        </div>
       </div>
     </div>
   </div>
@@ -49,41 +51,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-img {
-  width: 50%;
+.get.beer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   height: auto;
-}
-p {
-  font-size: 14px;
-  font-style: italic;
-}
-.get beer {
-  border: solid black;
-  border-radius: 25px;
-  background-color: #f2de77;
-  width: 215px;
-  height: auto;
-  color: black;
-  align-content: center;
-  text-align: center;
-  font-size: 10px;
-  padding: 20px;
-  margin: 5px;
-}
-.tile {
-  border: solid black;
-  border-radius: 25px;
-  background-color: #f2de77;
-  width: 215px;
-  height: auto;
-  color: black;
-  text-align: center;
-  font-size: 10px;
-}
-.selector {
-  margin-top: 50px;
-}
-select {
-  margin: 10px;
 }
 </style>
