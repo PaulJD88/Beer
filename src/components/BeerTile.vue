@@ -23,7 +23,15 @@
           <div class="myDIV">Hover Over For More Info</div>
           <div class="hide">
             <p>First Brewed: {{ beer.first_brewed }}</p>
-            <p>Good With: {{ beer.food_pairing[(0, 1, 2)] }}</p>
+            <p>
+              Good With:
+              <br />
+              &bull; {{ beer.food_pairing[0] }}
+              <br />
+              &bull; {{ beer.food_pairing[1] }}
+              <br />
+              &bull; {{ beer.food_pairing[2] }}
+            </p>
             <p>Brewers Tips: {{ beer.brewers_tips }}</p>
           </div>
         </div>

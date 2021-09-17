@@ -8,11 +8,12 @@
     <input v-model="beersRandom" value="no" type="radio" id="no" />
     <label for="no"> No I do not!</label><br />
 
-    <p v-if="beersRandom === 'yes'">Yaaaaaaaaaaaay!</p>
-    <p v-else-if="beersRandom === 'no'">Booo!</p>
+    <button v-if="beersRandom === 'yes'" @click="randomBeer">
+      It's Beer O'clock! &#127866;
+    </button>
+    <p1 v-else-if="beersRandom === 'no'"> &#128532;</p1>
     <br />
     <div class="get beer">
-      <button @click="randomBeer">Random Beer</button>
       <div class="flex-container">
         <div class="tile" v-for="beerbeer in beersR" :key="beerbeer.id">
           <h1>{{ beerbeer.name }}</h1>
@@ -23,7 +24,15 @@
           <div class="myDIV">Hover Over For More Info</div>
           <div class="hide">
             <p>First Brewed: {{ beerbeer.first_brewed }}</p>
-            <p>Good With: {{ beerbeer.food_pairing[(0, 1, 2)] }}</p>
+            <p>
+              Good With:
+              <br />
+              &bull; {{ beerbeer.food_pairing[0] }}
+              <br />
+              &bull; {{ beerbeer.food_pairing[1] }}
+              <br />
+              &bull; {{ beerbeer.food_pairing[2] }}
+            </p>
             <p>Brewers Tips: {{ beerbeer.brewers_tips }}</p>
           </div>
         </div>
@@ -42,6 +51,7 @@ export default {
     return {
       beersRandom: '',
       beersR: [],
+      popupActivo: false,
     };
   },
   methods: {
@@ -60,7 +70,6 @@ export default {
 </script>
 
 <style lang="postcss">
-
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -80,10 +89,14 @@ p {
   font-size: 15px;
 }
 
+p1 {
+  font-size: 100px;
+}
+
 .tile {
   border: solid black;
   border-radius: 25px;
-  background-image: radial-gradient(white, rgba(1, 1, 97, 0.719));
+  background-image: radial-gradient(white, rgba(206, 204, 69, 0.61));
   width: 250px;
   height: auto;
   color: black;
