@@ -11,7 +11,7 @@
     <button v-if="beersRandom === 'yes'" @click="randomBeer">
       It's Beer O'clock! &#127866;
     </button>
-    <p1 v-else-if="beersRandom === 'no'"> &#128532;</p1>
+    <p v-else-if="beersRandom === 'no'" v-html="ginSite">&#128532;</p>
     <br />
     <div class="get beer">
       <div class="flex-container">
@@ -51,7 +51,8 @@ export default {
     return {
       beersRandom: '',
       beersR: [],
-      popupActivo: false,
+      ginSite:
+        'Perhaps this is more up your street <a href="https://brightongin.com/"target="_blank">Brighton Gin</a>',
     };
   },
   methods: {
@@ -91,19 +92,6 @@ p {
 
 p1 {
   font-size: 100px;
-}
-
-.tile {
-  border: solid black;
-  border-radius: 25px;
-  background-image: radial-gradient(white, rgba(206, 204, 69, 0.61));
-  width: 250px;
-  height: auto;
-  color: black;
-  text-align: center;
-  font-size: 10px;
-  padding: 10px;
-  margin: 5px;
 }
 
 button {

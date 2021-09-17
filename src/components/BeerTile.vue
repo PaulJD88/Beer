@@ -7,11 +7,10 @@
         <option value="8">Eight</option>
         <option value="15">Fifteen</option>
       </select>
+      <button @click="getBeers">Show me the Beer!</button>
     </div>
     <br />
-    <div>
-      <button @click="getBeers">Get Beers</button>
-    </div>
+
     <div class="flex-container">
       <div class="beers" v-for="beer in beers" :key="beer.id">
         <div class="tile">
@@ -50,6 +49,7 @@ export default {
     return {
       abvAbove: 1,
       beers: [],
+      allBeers: [],
     };
   },
   methods: {
@@ -64,18 +64,51 @@ export default {
           console.log(this.abvAbove);
         });
     },
+    everyBeer() {
+      fetch('https://api.punkapi.com/v2/beers?per_page=80', {
+        method: 'GET',
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          this.allBeers = json;
+        });
+    },
   },
 };
 </script>
 
 <style>
+.tile {
+  border: solid black;
+  border-radius: 25px;
+  background-image: radial-gradient(white, rgba(206, 204, 69, 0.61));
+  width: 200px;
+  height: auto;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  margin: 5px;
+}
+
 .page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .select-style {
-  margin: 50px;
-  height: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 250px;
+  height: auto;
+}
+select {
+  margin: 10px;
+  height: 50px;
+  width: 105px;
 }
 </style>
