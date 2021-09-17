@@ -8,23 +8,23 @@
       </ul>
       <router-view />
     </div>
-    <div class="footer">
-      <h1>Copyright - T&P</h1>
-    </div>
   </div>
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
 body {
   background-color: white;
   margin: 0;
 }
+
 ul {
   display: flex;
   align-content: space-between;
   list-style-type: none;
   margin: 0;
-  padding: 5px;
+  padding: 0;
   height: 50px;
   overflow: hidden;
   background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(0, 0, 0));
@@ -36,19 +36,16 @@ li {
 
 li a,
 .dropbtn {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  border-radius: 20px;
   display: inline-block;
   color: black;
   font-size: 20px;
   text-align: center;
-  padding: 14px 18px;
+  padding: 12px 20px;
   text-decoration: none;
 }
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   color: white;
   background-color: black;
 }
@@ -81,15 +78,12 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
-}
-.footer {
-  height: auto;
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(0, 0, 0));
 }
 </style>
