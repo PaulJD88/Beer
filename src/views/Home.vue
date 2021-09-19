@@ -11,7 +11,7 @@
     <button v-if="beersRandom === 'yes'" @click="randomBeer">
       It's Beer O'clock! &#127866;
     </button>
-    <p v-else-if="beersRandom === 'no'" v-html="ginSite">&#128532;</p>
+    <p v-else-if="beersRandom === 'no'" v-html="ginSite"></p>
     <br />
     <div class="get beer">
       <div class="flex-container">
@@ -71,6 +71,13 @@ export default {
 </script>
 
 <style lang="postcss">
+.home {
+  background-color: rgba(189, 190, 190, 0.432);
+  margin: 50px 100px 150px 100px;
+  border: solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -83,6 +90,14 @@ export default {
 img {
   width: 80px;
   height: auto;
+}
+
+select {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  margin: 10px;
+  height: 50px;
+  width: 200px;
 }
 
 p {
@@ -145,70 +160,5 @@ button:active:after {
   flex-wrap: wrap;
   justify-content: center;
   height: auto;
-}
-
-/* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 </style>

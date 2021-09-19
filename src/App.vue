@@ -7,6 +7,7 @@
       <li><router-link to="/allbeer">Full Beer List</router-link></li>
     </ul>
     <router-view />
+    <footer> Built by Paul </footer>
   </div>
 </template>
 
@@ -59,5 +60,9 @@ li.dropdown {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
+}
+
+footer {
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
 }
 </style>

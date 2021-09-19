@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="select-style">
-      Alcohol By Volume (ABV) Above
+      <h1>Alcohol By Volume (ABV) Above</h1>
       <select v-model="abvAbove">
         <option value="1">One</option>
         <option value="8">Eight</option>
@@ -64,16 +64,6 @@ export default {
           console.log(this.abvAbove);
         });
     },
-    everyBeer() {
-      fetch('https://api.punkapi.com/v2/beers?per_page=80', {
-        method: 'GET',
-      })
-        .then((response) => response.json())
-        .then((json) => {
-          console.log(json);
-          this.allBeers = json;
-        });
-    },
   },
 };
 </script>
@@ -83,7 +73,7 @@ export default {
   border: solid black;
   border-radius: 25px;
   background-image: radial-gradient(white, rgba(206, 204, 69, 0.61));
-  width: 200px;
+  width: 250px;
   height: auto;
   color: black;
   text-align: center;
@@ -93,6 +83,10 @@ export default {
 }
 
 .page {
+  margin: 50px 100px 150px 100px;
+  border: solid black;
+  background-color: rgba(189, 190, 190, 0.432);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -105,10 +99,5 @@ export default {
   margin-top: 50px;
   width: 250px;
   height: auto;
-}
-select {
-  margin: 10px;
-  height: 50px;
-  width: 105px;
 }
 </style>
