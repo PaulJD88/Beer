@@ -1,7 +1,22 @@
 <template>
   <div class="information">
-    <div class="icon">&#127866; </div>
-    <h1>This is an information page</h1>
+    <div class="form">
+    <form @submit.prevent="submitForm">
+      <div>
+        <label for="name">Name:</label><br />
+        <input id="name" type="text" v-model="name" required />
+      </div>
+      <div>
+        <label for="email">Email:</label><br />
+        <input id="email" type="email" v-model="email" required />
+      </div>
+      <div>
+        <label for="caps">Let us know how the site can be improved below:</label><br />
+        <textarea id="caps" v-model="caps" required></textarea>
+      </div>
+      <button :class="[name ? activeClass : '']" type="submit">Submit</button>
+    </form>
+    </div>
     <p v-html="beerSites"></p>
   </div>
 </template>
@@ -10,6 +25,11 @@
 export default {
   data() {
     return {
+      name: '',
+      email: '',
+      caps: '',
+      response: '',
+      activeClass: 'active',
       beerSites:
         'Links to some beer related stuff <a href="https://www.harveys.org.uk/"target="_blank">Harveys Brewery</a>',
     };
@@ -17,8 +37,7 @@ export default {
 };
 </script>
 
-<style lang="postcss">
-
+<style lang="postcss" scoped>
 .information {
   background-color: rgba(189, 190, 190, 0.432);
   margin: 50px 100px 150px 100px;
@@ -26,7 +45,23 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+form {
+  font-size: 25px;
+  padding: 15px;
+}
+
+textarea {
+  margin: 10px;
+  width: 250px;
+}
+
+input {
+  height: 25px;
+  width: 225px;
+  margin: 8px;
+}
+
 .icon {
- font-size: 250px;
+  font-size: 250px;
 }
 </style>

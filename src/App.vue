@@ -2,12 +2,12 @@
   <div id="app">
     <ul>
       <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/information">Information</router-link></li>
-      <li><router-link to="/beers">Select Beer</router-link></li>
+      <li><router-link to="/selectbeer">Select Beer</router-link></li>
       <li><router-link to="/allbeer">Full Beer List</router-link></li>
+      <li><router-link to="/information">Information</router-link></li>
     </ul>
     <router-view />
-    <footer> Built by Paul </footer>
+    <footer>Built by Paul &#127866;</footer>
   </div>
 </template>
 
