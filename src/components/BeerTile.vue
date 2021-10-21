@@ -68,20 +68,7 @@ export default {
 };
 </script>
 
-<style>
-.tile {
-  border: solid black;
-  border-radius: 25px;
-  background-image: radial-gradient(white, rgba(206, 204, 69, 0.61));
-  width: 250px;
-  height: auto;
-  color: black;
-  text-align: center;
-  font-size: 12px;
-  padding: 10px;
-  margin: 5px;
-}
-
+<style scoped>
 .page {
   margin: 50px 100px 150px 100px;
   border: solid black;
