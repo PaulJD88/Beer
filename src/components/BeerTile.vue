@@ -13,33 +13,15 @@
 
     <div class="flex-container">
       <div class="beers" v-for="beer in beers" :key="beer.id">
-        <div class="tile">
-          <h2 class="title">{{ beer.name }}</h2>
-          <h2>"{{ beer.tagline }}"</h2>
-          <img :src="beer.image_url" />
-          <h3>{{ beer.abv }}%</h3>
-          <p class="info">{{ beer.description }}</p>
-          <div class="myDIV">Hover Over For More Info</div>
-          <div class="hide">
-            <p>First Brewed: {{ beer.first_brewed }}</p>
-            <p>
-              Good With:
-              <br />
-              &bull; {{ beer.food_pairing[0] }}
-              <br />
-              &bull; {{ beer.food_pairing[1] }}
-              <br />
-              &bull; {{ beer.food_pairing[2] }}
-            </p>
-            <p>Brewers Tips: {{ beer.brewers_tips }}</p>
-          </div>
-        </div>
+        <tile :beer="beer"></tile>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import tile from './Tile.vue';
+
 export default {
   name: 'BeerTile',
   props: {
@@ -49,8 +31,10 @@ export default {
     return {
       abvAbove: 1,
       beers: [],
-      allBeers: [],
     };
+  },
+  components: {
+    tile,
   },
   methods: {
     getBeers() {
