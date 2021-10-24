@@ -15,26 +15,8 @@
     <br />
     <div class="get beer">
       <div class="flex-container">
-        <div class="tile" v-for="beerbeer in beersR" :key="beerbeer.id">
-          <h1>{{ beerbeer.name }}</h1>
-          <h2>"{{ beerbeer.tagline }}"</h2>
-          <img :src="beerbeer.image_url" />
-          <h3>{{ beerbeer.abv }}%</h3>
-          <p>{{ beerbeer.description }}</p>
-          <div class="myDIV">Hover Over For More Info</div>
-          <div class="hide">
-            <p>First Brewed: {{ beerbeer.first_brewed }}</p>
-            <p>
-              Good With:
-              <br />
-              &bull; {{ beerbeer.food_pairing[0] }}
-              <br />
-              &bull; {{ beerbeer.food_pairing[1] }}
-              <br />
-              &bull; {{ beerbeer.food_pairing[2] }}
-            </p>
-            <p>Brewers Tips: {{ beerbeer.brewers_tips }}</p>
-          </div>
+        <div class="tile" v-for="beer in beersR" :key="beer.id">
+          <tile :beer="beer"></tile>
         </div>
       </div>
     </div>
@@ -42,6 +24,8 @@
 </template>
 
 <script>
+import tile from '../components/Tile.vue';
+
 export default {
   name: 'Home',
   props: {
@@ -54,6 +38,9 @@ export default {
       ginSite:
         'Perhaps this is more up your street <a href="https://brightongin.com/"target="_blank">Brighton Gin</a>',
     };
+  },
+  components: {
+    tile,
   },
   methods: {
     randomBeer() {

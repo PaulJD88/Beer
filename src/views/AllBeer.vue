@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import tile from './Tile.vue';
+import tile from '../components/Tile.vue';
 
 export default {
   data() {

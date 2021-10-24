@@ -16,7 +16,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../components/Information.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../views/Information.vue'),
   },
   {
     path: '/selectbeer',
@@ -24,7 +24,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../components/BeerTile.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../views/BeerTile.vue'),
   },
   {
     path: '/allbeer',
@@ -32,7 +32,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../components/AllBeer.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../views/AllBeer.vue'),
   },
 ];
 
