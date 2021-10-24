@@ -36,6 +36,3 @@ export default {
   },
 };
 </script>
-
-// How to create pagination within page
-//
