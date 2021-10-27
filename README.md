@@ -14,6 +14,8 @@ This is a working progress to teach myself vue.js
 
 1) Add more filters in
 
+1) Add feature to remove on reset
+
 
 ## Project setup
 ```

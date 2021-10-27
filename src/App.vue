@@ -64,6 +64,14 @@ li.dropdown {
 
 footer {
   background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  padding-left: 10px;
 }
 
 *, *::before, *::after {
