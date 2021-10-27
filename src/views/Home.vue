@@ -69,7 +69,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
   height: auto;
   margin-bottom: 100px;
 }

@@ -66,11 +66,3 @@ footer {
   background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
 }
 </style>
-
-/* // Jobs to do:
-
-// Apply pagination to page on AllBeer.vue
-// Change css of flex elements across whole website
-// Add server response to form submission
-// General style changes - tidying up
- */

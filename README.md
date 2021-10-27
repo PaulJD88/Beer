@@ -1,4 +1,15 @@
-# beer
+# Beer
+This is a working progress to teach myself vue.js 
+## Next Steps:
+
+1) Apply pagination to page on AllBeer.vue
+
+1) Change css of flex elements across whole website
+
+1) Add server response to form submission
+
+1) General style changes - tidying up
+
 
 ## Project setup
 ```
