@@ -3,7 +3,7 @@
     <h1>A list of all available beer</h1>
     <button @click="everyBeer">Get Beers</button>
     <div class="flex-container">
-      <div class="abeers" v-for="beer in allBeers" :key="beer.id">
+      <div class="beers" v-for="beer in allBeers" :key="beer.id">
         <tile :beer="beer"></tile>
       </div>
     </div>

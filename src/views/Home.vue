@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style lang="scss">
 .home {
   background-color: rgba(189, 190, 190, 0.432);
   margin: 50px 100px 150px 100px;
@@ -71,6 +71,9 @@ export default {
   justify-content: center;
   height: auto;
   margin-bottom: 100px;
+}
+.beers {
+  margin-bottom: 10px;
 }
 
 img {

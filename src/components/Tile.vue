@@ -35,13 +35,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .tile {
   border: solid black;
   border-radius: 25px;
   background-image: radial-gradient(white, rgba(206, 204, 69, 0.61));
   width: 250px;
-  height: auto;
+  height: 100%;
   color: black;
   text-align: center;
   font-size: 12px;

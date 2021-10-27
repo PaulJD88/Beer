@@ -65,4 +65,8 @@ li.dropdown {
 footer {
   background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
 }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 </style>

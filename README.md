@@ -10,6 +10,10 @@ This is a working progress to teach myself vue.js
 
 1) General style changes - tidying up
 
+1) @click on "more info", create pop up over tile
+
+1) Add more filters in
+
 
 ## Project setup
 ```
