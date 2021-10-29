@@ -2,7 +2,7 @@
   <div class="tile">
     <h1>{{ beer.name }}</h1>
     <h2>"{{ beer.tagline }}"</h2>
-    <img :src="beer.image_url" />
+    <img :src="beer.image_url"/>
     <h3>{{ beer.abv }}%</h3>
     <p>{{ beer.description }}</p>
     <div class="myDIV">Hover Over For More Info</div>
@@ -36,6 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .tile {
   border: solid black;
   border-radius: 25px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <div class="container">
     <div class="form">
     <form @submit.prevent="submitForm">
       <div>
@@ -38,12 +38,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.information {
-  background-color: rgba(189, 190, 190, 0.432);
-  margin: 50px 100px 150px 100px;
-  border: solid black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 form {
   font-size: 25px;

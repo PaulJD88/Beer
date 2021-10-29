@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container">
     <h1>A list of all available beer</h1>
     <button @click="everyBeer">Get Beers</button>
     <div class="flex-container">

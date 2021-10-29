@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container">
     <h1>Do you like Beer?</h1>
 
     <input v-model="beersRandom" value="yes" type="radio" id="yes" />
@@ -13,13 +13,11 @@
     </button>
     <p v-else-if="beersRandom === 'no'" v-html="ginSite"></p>
     <br />
-    <div class="get beer">
       <div class="flex-container">
-        <div class="tile" v-for="beer in beersR" :key="beer.id">
+        <div class="beers" v-for="beer in beersR" :key="beer.id">
           <tile :beer="beer"></tile>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -58,7 +56,8 @@ export default {
 </script>
 
 <style lang="scss">
-.home {
+
+.container {
   background-color: rgba(189, 190, 190, 0.432);
   margin: 50px 100px 150px 100px;
   border: solid black;
@@ -143,11 +142,5 @@ button:active:after {
 .myDIV:hover + .hide {
   display: block;
   color: black;
-}
-.get.beer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: auto;
 }
 </style>
