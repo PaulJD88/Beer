@@ -34,7 +34,7 @@ export default {
       beersRandom: '',
       beersR: [],
       ginSite:
-        'Perhaps this is more up your street <a href="https://brightongin.com/"target="_blank">Brighton Gin</a>',
+        'Perhaps this is more to your taste <a href="https://brightongin.com/"target="_blank">Brighton Gin</a>',
     };
   },
   components: {
@@ -59,7 +59,7 @@ export default {
 
 .container {
   background-color: rgba(189, 190, 190, 0.432);
-  margin: 50px 100px 150px 100px;
+  margin: 50px 250px 150px 250px;
   border: solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -73,11 +73,6 @@ export default {
 }
 .beers {
   margin-bottom: 10px;
-}
-
-img {
-  width: 80px;
-  height: auto;
 }
 
 select {
@@ -133,14 +128,5 @@ button:active:after {
   margin: 0;
   opacity: 1;
   transition: 0s;
-}
-
-.hide {
-  display: none;
-}
-
-.myDIV:hover + .hide {
-  display: block;
-  color: black;
 }
 </style>

@@ -49,4 +49,18 @@ export default {
   padding: 10px;
   margin: 5px;
 }
+
+img {
+  width: 80px;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: black;
+}
 </style>
