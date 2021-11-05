@@ -74,7 +74,9 @@ footer {
   padding-left: 10px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 </style>
